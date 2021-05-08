@@ -1,7 +1,8 @@
+# from music_controler.api.models import Room
 from django.contrib import admin
 from django.urls import path
-from .views import main
+from .views import RoomView
 
 urlpatterns = [
-    path('home', main),
+    path('room', RoomView.as_view()),
 ]
