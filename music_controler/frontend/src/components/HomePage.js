@@ -9,6 +9,12 @@ export default class HomePage extends Component{
         super(props);
     }
 
+    renderHomePage(){
+        return(
+            
+        );
+    }
+
     render(){
         return (
             <Router>
