@@ -1,4 +1,5 @@
 from requests.api import head
+from requests.sessions import session
 from .models import SpotifyToken
 from django.utils import timezone
 from datetime import timedelta
@@ -50,7 +51,7 @@ def refresh_spotify_token(session_id):
     access_token = response.get('access_token')
     token_type = response.get('token_type')
     expires_in = response.get('expires_in')
-    refresh_token = response.get('refresh_token')
+    # refresh_token = response.get('refresh_token')
 
     update_or_create_user_tokens(session_id, access_token, token_type, expires_in, refresh_token)
 
@@ -69,3 +70,12 @@ def execute_spotify_api_request(session_id, endpoint, post_=False, put_=False):
         return response.json()
     except:
         return {'Error': 'Issue with request'}
+
+def play_song(session_id):
+    return execute_spotify_api_request(session_id, "player/play", put_=True)
+
+def pause_song(session_id):
+    return execute_spotify_api_request(session_id, "player/pause", put_=True)
+
+def skip_song(session_id):
+    return execute_spotify_api_request(session_id, "player/next", post_=True)
