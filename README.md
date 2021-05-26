@@ -6,10 +6,10 @@ Used Tech with Tim tutorial to learn the firsts of Django with React to create a
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <img src="image.png" alt="Logo" width="160" height="80">
+    <img src="image.png" alt="Logo" width="260" height="80">
   </a>
 
-  <h3 align="center">Python script to create a Spotify playlist from a Youtube Playlist</h3>
+  <h3 align="center">Learning by creating a Django-React Web application for Spotify Group sharing</h3>
 
 </p>
 
@@ -25,18 +25,11 @@ Used Tech with Tim tutorial to learn the firsts of Django with React to create a
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Built using python, Spotify Web API docs, Google API docs.
-1. Input your Spotify information in indentification.py, requires web developer agreement
-2. Input your Google API infomration in client_secret.json, requires web developer infomration and project
-3. Run createPL.py, authorize Youtube.
-Many thanks to The Come Up, for the tutorial.
-
-Features:
-* Fast transition
-
-### Built With
-mainly relied on web documentations from Spotify and Youtube to create YT client and Spotify playlist
-
+Built using Django backend, React frontend, Spotify Web API docs
+1. Followed along a tutorial and with a heavy hand of stackoverflow guides to debug
+2. Web application currently only available on localhost or local network
+3. Run manage.py for backend, and node on frontend to launch web application at 127.0.0.1:port
+4. Currently did not upload config and setting files
 
 <!-- GETTING STARTED -->
 ## Getting Started
